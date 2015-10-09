@@ -15,3 +15,13 @@ Package.onUse(function(api) {
 
   api.export(['ReactiveArray'], ['client', 'server']);
 });
+
+Package.onTest(function(api) {
+  api.use([
+    'tinytest',
+    'tracker',
+    'jagi:reactive-array'
+  ]);
+
+  api.addFiles('test/reactive_array.js', ['client', 'server']);
+});
